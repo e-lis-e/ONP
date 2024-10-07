@@ -23,5 +23,6 @@ public class Postagem {
     private String titulo;
     private String conteudo;
     private Boolean curtida;
+    private String comentario;
     
 }
