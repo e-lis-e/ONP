@@ -1,5 +1,8 @@
 package br.com.politics.ONP.entities;
 
+import java.util.Date;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -15,8 +18,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
-
+@Table(name = "discursao")
 public class Discursao {
     @Id
     @GeneratedValue
@@ -24,9 +26,7 @@ public class Discursao {
     private String titulo;
     private String conteudo;
     private String interacao;
-    @OneToMany(mapped = 'comentario')
+    @OneToMany(mappedBy = "discursao")
     private List<Comentario> comentarios;
-    private Date data 
-
-
+    private Date data;
 }
