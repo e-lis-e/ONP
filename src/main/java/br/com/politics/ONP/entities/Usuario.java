@@ -25,7 +25,7 @@ public class Usuario {
     private String dicussaos; //TODO: Adicionar relação.
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;
-    private String postagens; //TODO: Adicionar relação.
+    private Postagem postagens; 
     private String curtidas; //TODO: Adicionar relação.
 
 }

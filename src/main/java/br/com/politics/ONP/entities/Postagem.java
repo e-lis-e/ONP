@@ -24,7 +24,7 @@ public class Postagem {
     @Id
     @GeneratedValue
     private Long postagem_id;
-    private String usuario; //TODO: relacionar à entidade
+    private Usuario usuario;
     private String titulo;
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
