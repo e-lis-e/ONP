@@ -1,14 +1,16 @@
 package br.com.politics.ONP.entities;
 
-import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,16 +22,23 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table
 
-public class Postagem {
+public class Comentario {
     @Id
     @GeneratedValue
-    private Long postagem_id;
-    private String usuario; //TODO: relacionar à entidade
-    private String titulo;
+    private Long comentario_id;
+    @ManyToOne
+    @JoinColumn(name = "postagem_id")
+    private Postagem postagem;
+    private String discussão; //TODO: relacionar à entidade
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
-    @OneToMany(mappedBy = "comentario")
-    private List<Comentario> comentarios; // ligado à entidade comentário
-    private Date data;
+    @ManyToOne
+    @JoinColumn(name = "comentario_pai_id")
+    private Comentario comentarioPai;
+    @OneToMany(mappedBy = "comentarioPai")
+    private List<Comentario> comentarioFilho;
+    private Data data;
+
+
     
 }
