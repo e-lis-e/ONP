@@ -24,10 +24,10 @@ public class Postagem {
     @Id
     @GeneratedValue
     private Long postagem_id;
-    private String usuario; //ligado à entidade usuário
+    private String usuario; //TODO: relacionar à entidade
     private String titulo;
     private String conteudo;
-    private Boolean curtir; //ligado à entidade curtida
+    private String interacao; //TODO: relacionar à entidade
     @OneToMany(mappedBy = "comentario")
     private List<Comentario> comentarios; // ligado à entidade comentário
     private Date data;

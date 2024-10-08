@@ -29,9 +29,9 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "postagem_id")
     private Postagem postagem;
-    private String discussão; //FIXME: add relação de discussão
+    private String discussão; //TODO: relacionar à entidade
     private String conteudo;
-    private Boolean curtida; // ligado à entidade curtida
+    private String interacao; //TODO: relacionar à entidade
     @ManyToOne
     @JoinColumn(name = "comentario_pai_id")
     private Comentario comentarioPai;
