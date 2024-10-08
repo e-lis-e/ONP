@@ -1,5 +1,6 @@
 package br.com.politics.ONP.entities;
 
+import br.com.politics.ONP.entities.enums.PerfilEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,10 +21,11 @@ public class Usuario {
     private String email;
     private String senha;
     private String fotoDePerfil;
-    private String comentarios;
-    private String dicussaos;
-    private String tipoUsuario;
-    private String postagens;
-    private String curtidas;
+    private String comentarios; //TODO: Adicionar relação.
+    private String dicussaos; //TODO: Adicionar relação.
+    @Enumerated(EnumType.STRING)
+    private PerfilEnum tipoUsuario;
+    private String postagens; //TODO: Adicionar relação.
+    private String curtidas; //TODO: Adicionar relação.
 
 }
