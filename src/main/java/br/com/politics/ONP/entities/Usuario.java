@@ -21,11 +21,11 @@ public class Usuario {
     private String email;
     private String senha;
     private String fotoDePerfil;
-    private String comentarios; //TODO: Adicionar relação.
+    private Comentario comentarios; //TODO: Adicionar relação.
     private String dicussaos; //TODO: Adicionar relação.
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;
     private Postagem postagens; 
-    private String curtidas; //TODO: Adicionar relação.
+    private String interacoes; //TODO: Adicionar relação.
 
 }
