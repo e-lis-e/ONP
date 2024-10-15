@@ -40,7 +40,7 @@ public class PostagemController {
         .orElseGet(() -> ResponseEntity.notFound().build());
   }
 
-  @GetMapping("/usuario/{usuarioId}")
+  @GetMapping("/usuario/{usuario_Id}")
   public ResponseEntity<List<Postagem>> findByUsuario(@PathVariable Long usuario_id) {
     Usuario usuario = new Usuario();
     usuario.setId(usuario_id);
