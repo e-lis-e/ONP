@@ -25,11 +25,8 @@ public class DiscussaoService {
     public Discussao update(Long id, Discussao updatedDiscussao) {
         return discussaoRepository.findById(id)
                 .map(discussao -> {
-                    // Atualize somente os atributos que existem na classe Discussao
                     discussao.setTitulo(updatedDiscussao.getTitulo());
                     discussao.setConteudo(updatedDiscussao.getConteudo());
-                    // Remova a linha abaixo se não houver um atributo 'autor'
-                    // discussao.setAutor(updatedDiscussao.getAutor());
                     return discussaoRepository.save(discussao);
                 })
                 .orElseThrow(() -> new RuntimeException("Discussão não encontrada com o ID: " + id));
