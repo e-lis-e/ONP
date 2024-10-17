@@ -44,7 +44,7 @@ public class PostagemController {
   public ResponseEntity<List<Postagem>> findByUsuario(@PathVariable Long usuario_id) {
     Usuario usuario = new Usuario();
     usuario.setId(usuario_id);
-    List<Postagem> postagens = postagemService.findByUsuario(usuario_id);
+    List<Postagem> postagens = postagemService.findByUsuario(usuario_id); //FIXME: esta recebendo o usuário ID, porém a função pede um Usuário Object
     return ResponseEntity.ok(postagens);
   }
 

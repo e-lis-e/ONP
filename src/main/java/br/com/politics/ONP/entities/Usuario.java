@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "user")
 @NoArgsConstructor
@@ -17,15 +19,18 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String nome;
+    private String nomeDeUsuario;
     private String email;
     private String senha;
     private String fotoDePerfil;
-    private Comentario comentarios; //TODO: Adicionar relação.
-    private String dicussaos; //TODO: Adicionar relação.
+    @OneToMany(mappedBy = "usuario")
+    private List<Comentario> comentarios;
+    @OneToMany(mappedBy = "usuario")
+    private List<Discursao> dicussaos;
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;
-    private Postagem postagens; 
+    @OneToMany(mappedBy = "usuario")
+    private List<Postagem> postagens;
     private String interacoes; //TODO: Adicionar relação.
 
 }
