@@ -1,16 +1,20 @@
 package br.com.politics.ONP.entities;
 
+import java.util.Date;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,11 +24,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(name = "comentarios")
 
 public class Comentario {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long comentario_id;
 
     @ManyToOne
@@ -37,15 +41,13 @@ public class Comentario {
 
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
-    
-    @ManyToOne
+    @ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "comentario_pai_id")
     private Comentario comentarioPai;
-    
-    @OneToMany(mappedBy = "comentarioPai")
+    @OneToMany(mappedBy = "comentarioPai", cascade = CascadeType.ALL)
     private List<Comentario> comentarioFilho;
-    
-    private Data data;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date data;
 
 
     
