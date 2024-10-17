@@ -26,7 +26,7 @@ public class Discussao {
     private String titulo;
     private String conteudo;
     private String interacao;
-    @OneToMany(mappedBy = "discursao")
+    @OneToMany(mappedBy = "discussao")
     private List<Comentario> comentarios;
     private Date data;
 }
