@@ -34,6 +34,9 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "postagem_id")
     private Postagem postagem;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "discussao_id")
