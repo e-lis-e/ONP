@@ -27,7 +27,7 @@ public class PostagemService {
         return postagemRepository.findByUsuario(usuario);
     }
 
-    public Postagem save(Postagem postagem) {
+    public Postagem createPostagem(Postagem postagem) {
         return postagemRepository.save(postagem);
     }
 

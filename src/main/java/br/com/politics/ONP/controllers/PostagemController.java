@@ -50,7 +50,7 @@ public class PostagemController {
 
   @PostMapping
   public ResponseEntity<Postagem> createPostagem(@RequestBody Postagem postagem) {
-    return ResponseEntity.ok(postagemService.save(postagem));
+    return ResponseEntity.ok(postagemService.createPostagem(postagem));
   }
 
   @PutMapping("/{id}")
