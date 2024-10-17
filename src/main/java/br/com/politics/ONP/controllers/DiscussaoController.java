@@ -21,10 +21,10 @@ public class DiscussaoController {
     @Autowired
     private DiscussaoService discursaoService;
 
-    @GetMapping
-    public List<Discussao> getAllDiscussoes() {
-        return discursaoService.findAll();
-    }
+//   @GetMapping
+//   public List<Discussao> getAllDiscussoes() {
+//       return discursaoService.findAll();
+//   }
 
     @GetMapping("/{id}")
     public ResponseEntity<Discussao> getDiscursaoById(@PathVariable Long id) {
