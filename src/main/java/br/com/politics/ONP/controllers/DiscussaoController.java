@@ -1,7 +1,7 @@
 package br.com.politics.ONP.controllers;
 
-import br.com.politics.ONP.entities.Discursao;
-import br.com.politics.ONP.services.discussao.DiscursaoService;
+import br.com.politics.ONP.entities.Discussao;
+import br.com.politics.ONP.services.discussao.DiscussaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,31 +15,31 @@ import java.util.Optional;
 @ResponseBody
 @RequestMapping("/api/discussoes")
 
-public class DiscursaoController {
+public class DiscussaoController {
 
 
     @Autowired
-    private DiscursaoService discursaoService;
+    private DiscussaoService discursaoService;
 
     @GetMapping
-    public List<Discursao> getAllDiscussoes() {
+    public List<Discussao> getAllDiscussoes() {
         return discursaoService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Discursao> getDiscursaoById(@PathVariable Long id) {
-        Optional<Discursao> discursao = discursaoService.findById(id);
+    public ResponseEntity<Discussao> getDiscursaoById(@PathVariable Long id) {
+        Optional<Discussao> discursao = discursaoService.findById(id);
         return discursao.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public ResponseEntity<Discursao> createDiscursao(@RequestBody Discursao discursao) {
+    public ResponseEntity<Discussao> createDiscursao(@RequestBody Discussao discursao) {
         return ResponseEntity.ok(discursaoService.save(discursao));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Discursao> updateDiscursao(@PathVariable Long id, @RequestBody Discursao discursaoDetails) {
+    public ResponseEntity<Discussao> updateDiscursao(@PathVariable Long id, @RequestBody Discussao discursaoDetails) {
         return ResponseEntity.ok(discursaoService.update(id, discursaoDetails));
     }
 

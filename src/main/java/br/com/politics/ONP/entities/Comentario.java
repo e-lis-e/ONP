@@ -33,7 +33,7 @@ public class Comentario {
 
     @ManyToOne
     @JoinColumn(name = "discussao_id")
-    private Discursao discussao;
+    private Discussao discussao;
 
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
