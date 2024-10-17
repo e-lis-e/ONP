@@ -18,8 +18,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "discursao")
-public class Discursao {
+@Table(name = "discussao")
+public class Discussao {
     @Id
     @GeneratedValue
     private Long discursao_id;
