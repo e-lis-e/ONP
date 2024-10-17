@@ -5,10 +5,9 @@ import br.com.politics.ONP.exceptions.UsuarioExistenteException;
 import br.com.politics.ONP.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -26,6 +25,12 @@ public class UsuarioController {
             System.out.println(e.getMessage());
             return ResponseEntity.status(500).body(null);
         }
+    }
+
+    @GetMapping
+    public ResponseEntity<Usuario> listaUsuarios() {
+        List<Usuario> usuarios = usuarioService.listarUsuarios();
+        return ResponseEntity.ok((Usuario) usuarios);
     }
 
     //Método de tratamento de erro =! de try and catch

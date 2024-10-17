@@ -27,7 +27,9 @@ public class Postagem {
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
     @OneToMany(mappedBy = "postagem")
-    private List<Comentario> comentarios; // ligado à entidade comentário
+    private List<Comentario> comentarios;
     private Date data;
+
+    //Adicionar tipo de postagem
     
 }

@@ -46,6 +46,7 @@ public class Comentario {
     private List<Comentario> comentarioFilho;
     @Temporal(TemporalType.TIMESTAMP)
     private Date data;
+    //Adicionar característica de comentário verificado
 
 
     

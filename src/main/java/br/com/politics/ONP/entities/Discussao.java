@@ -20,6 +20,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "discussao")
 public class Discussao {
+    //TODO: EXCLUIR ENTIDADE E PASSAR LÓGICA PARA POSTAGEM
+
     @Id
     @GeneratedValue
     private Long discursao_id;
