@@ -23,8 +23,8 @@ public class PostagemService {
         return postagemRepository.findById(postagem_id);
     }
 
-    public List<Postagem> findByUsuario(Long usuario_id) {
-        return postagemRepository.findByUsuario(usuario_id);
+    public List<Postagem> findByUsuario(Usuario usuario) {
+        return postagemRepository.findByUsuario(usuario);
     }
 
     public Postagem save(Postagem postagem) {
