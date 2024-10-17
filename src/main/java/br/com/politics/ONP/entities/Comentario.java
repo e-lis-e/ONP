@@ -26,17 +26,25 @@ public class Comentario {
     @Id
     @GeneratedValue
     private Long comentario_id;
+
     @ManyToOne
     @JoinColumn(name = "postagem_id")
     private Postagem postagem;
-    private String discussão; //TODO: relacionar à entidade
+
+    @ManyToOne
+    @JoinColumn(name = "discussao_id")
+    private Discursao discussao;
+
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
+    
     @ManyToOne
     @JoinColumn(name = "comentario_pai_id")
     private Comentario comentarioPai;
+    
     @OneToMany(mappedBy = "comentarioPai")
     private List<Comentario> comentarioFilho;
+    
     private Data data;
 
 

@@ -3,30 +3,31 @@ package br.com.politics.ONP.entities;
 import java.util.Date;
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "discursao")
+@Table(name = "discussao")
 public class Discursao {
+
     @Id
-    @GeneratedValue
-    private Long discursao_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String titulo;
     private String conteudo;
-    private String interacao;
-    @OneToMany(mappedBy = "discursao")
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario autor;
+
+    @OneToMany(mappedBy = "discussao", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comentario> comentarios;
-    private Date data;
+
+    private Date dataCriacao;
 }
