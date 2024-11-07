@@ -28,6 +28,11 @@ public class PostagemController {
   @Autowired
   private PostagemService postagemService;
 
+  @PostMapping
+  public ResponseEntity<Postagem> createPostagem(@RequestBody Postagem postagem) {
+    return ResponseEntity.ok(postagemService.createPostagem(postagem));
+  }
+
   @GetMapping
   public List<Postagem> getAllPostagens() {
     return postagemService.findAll();
@@ -48,10 +53,6 @@ public class PostagemController {
     return ResponseEntity.ok(postagens);
   }
 
-  @PostMapping
-  public ResponseEntity<Postagem> createPostagem(@RequestBody Postagem postagem) {
-    return ResponseEntity.ok(postagemService.save(postagem));
-  }
 
   @PutMapping("/{id}")
   public ResponseEntity<Postagem> updatePostagem(@PathVariable Long id, @RequestBody Postagem postagemDetails) {

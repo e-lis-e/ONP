@@ -15,6 +15,10 @@ public class PostagemService {
     @Autowired
     private PostagemRepository postagemRepository;
 
+    public Postagem createPostagem(Postagem postagem) {
+        return postagemRepository.save(postagem);
+    }
+
     public List<Postagem> findAll() {
         return postagemRepository.findAll();
     }
@@ -27,9 +31,6 @@ public class PostagemService {
         return postagemRepository.findByUsuario(usuario);
     }
 
-    public Postagem save(Postagem postagem) {
-        return postagemRepository.save(postagem);
-    }
 
     public Postagem update(Long postagem_id, Postagem postagemDetails) {
         return postagemRepository.findById(postagem_id).map(postagem -> {
