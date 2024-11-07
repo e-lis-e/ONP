@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb58ee3a-883e-4f14-8690-a6eaf3e3c8a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/FnpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/FnpApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/ServerPortListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/ServerPortListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/controllers/PostagemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/controllers/PostagemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/controllers/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Discussao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Discussao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Postagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Postagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/enums/PerfilEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/enums/PerfilEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/exceptions/UsuarioExistenteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/exceptions/UsuarioExistenteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/ComentarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/ComentarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/DiscussaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/DiscussaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/PostagemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/PostagemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/cometario/ComentarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/cometario/ComentarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/discussao/DiscussaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/discussao/DiscussaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/interacao/InteracaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/interacao/InteracaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/postagem/PostagemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/postagem/PostagemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/usuario/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/usuario/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/usuario/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/politics/ONP/FnpApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/test/java/br/com/politics/ONP/FnpApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="eb58ee3a-883e-4f14-8690-a6eaf3e3c8a1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,31 +37,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.FnpApplication.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop-luis&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jlma7/OneDrive/Documentos/ONP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.FnpApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "Merge-branch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jlma7/OneDrive/Documentos/ONP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jlma7\OneDrive\Documentos\ONP\Backend" />
@@ -136,7 +105,7 @@
       <workItem from="1729180075274" duration="8675000" />
       <workItem from="1729789392057" duration="160000" />
       <workItem from="1729790500822" duration="36000" />
-      <workItem from="1730998423838" duration="1077000" />
+      <workItem from="1730998423838" duration="1943000" />
     </task>
     <servers />
   </component>
