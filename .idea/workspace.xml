@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb58ee3a-883e-4f14-8690-a6eaf3e3c8a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/FnpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/FnpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/ServerPortListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/ServerPortListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/controllers/PostagemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/controllers/PostagemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Discussao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Discussao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Postagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Postagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/entities/enums/PerfilEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/entities/enums/PerfilEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/exceptions/UsuarioExistenteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/exceptions/UsuarioExistenteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/ComentarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/ComentarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/DiscussaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/DiscussaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/PostagemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/PostagemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/repositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/repositories/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/cometario/ComentarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/cometario/ComentarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/discussao/DiscussaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/discussao/DiscussaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/interacao/InteracaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/interacao/InteracaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/postagem/PostagemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/postagem/PostagemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/politics/ONP/services/usuario/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/br/com/politics/ONP/services/usuario/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/politics/ONP/FnpApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/test/java/br/com/politics/ONP/FnpApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mw8PwDabSjShwxkaj7uJyA2xSZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.FnpApplication.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop-luis&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jlma7/OneDrive/Documentos/ONP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jlma7\OneDrive\Documentos\ONP\Backend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FnpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DATABASE_PASSWORD" value="Spider.d3v" />
+        <env name="DATABASE_URL" value="jdbc:postgresql://localhost:5432/ONP" />
+        <env name="DATABASE_USERNAME" value="postgres" />
+      </envs>
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ONP" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.politics.ONP.FnpApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb58ee3a-883e-4f14-8690-a6eaf3e3c8a1" name="Changes" comment="" />
+      <created>1727976258217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727976258217</updated>
+      <workItem from="1728342941471" duration="259000" />
+      <workItem from="1728343209425" duration="5504000" />
+      <workItem from="1728582107199" duration="137000" />
+      <workItem from="1728585659742" duration="521000" />
+      <workItem from="1729180075274" duration="8675000" />
+      <workItem from="1729789392057" duration="160000" />
+      <workItem from="1729790500822" duration="36000" />
+      <workItem from="1730998423838" duration="1077000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
