@@ -10,7 +10,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "usuarios")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -25,7 +25,7 @@ public class Usuario {
     private String fotoDePerfil;
     @OneToMany(mappedBy = "usuario")
     private List<Comentario> comentarios;
-    //@OneToMany(mappedBy = "usuario") TODO:Aguardando implementação de discussao
+    //@OneToMany(mappedBy = "usuario")
     //private List<Discussao> dicussaos;
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;

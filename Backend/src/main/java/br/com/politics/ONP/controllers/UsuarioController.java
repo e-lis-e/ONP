@@ -28,9 +28,9 @@ public class UsuarioController {
     }
 
     @GetMapping
-    public ResponseEntity<Usuario> listaUsuarios() {
+    public ResponseEntity<List<Usuario>> listaUsuarios() {
         List<Usuario> usuarios = usuarioService.listarUsuarios();
-        return ResponseEntity.ok((Usuario) usuarios);
+        return ResponseEntity.ok(usuarios);
     }
 
     //Método de tratamento de erro =! de try and catch
