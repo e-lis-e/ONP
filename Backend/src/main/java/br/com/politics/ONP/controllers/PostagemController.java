@@ -48,8 +48,8 @@ public class PostagemController {
   }
 
   @GetMapping("/usuario/{usuario_Id}")
-  public ResponseEntity<List<Postagem>> findByUsuario(@PathVariable Long usuario_id) {
-    List<Postagem> postagens = postagemService.findByUsuario(usuario_id);
+  public ResponseEntity<List<Postagem>> findByUsuarioId(@PathVariable Long usuario_id) {
+    List<Postagem> postagens = postagemService.findByUsuarioId(usuario_id);
     return ResponseEntity.ok(postagens);
   }
 
