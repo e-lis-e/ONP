@@ -9,6 +9,5 @@ import java.util.List;
 
 public interface PostagemRepository extends JpaRepository<Postagem, Long>{
     List<Postagem> findByUsuarioId(Long usuario_id);
-    // @Query()
     
 }
