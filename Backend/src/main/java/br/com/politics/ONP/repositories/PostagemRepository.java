@@ -10,5 +10,6 @@ import java.util.List;
 
 public interface PostagemRepository extends JpaRepository<Postagem, Long>{
     List<Postagem> findByUsuario(Usuario usuario);
+    // @Query()
     
 }

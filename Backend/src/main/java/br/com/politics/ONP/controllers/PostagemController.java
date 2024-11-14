@@ -27,6 +27,8 @@ public class PostagemController {
 
   @Autowired
   private PostagemService postagemService;
+  @Autowired
+  private UsuarioService usuarioService;
 
   @PostMapping
   public ResponseEntity<Postagem> createPostagem(@RequestBody Postagem postagem) {
@@ -47,8 +49,6 @@ public class PostagemController {
 
   @GetMapping("/usuario/{usuario_Id}")
   public ResponseEntity<List<Postagem>> findByUsuario(@PathVariable Long usuario_id) {
-    Usuario usuario = new Usuario();
-    usuario.setId(usuario_id);
     List<Postagem> postagens = postagemService.findByUsuario(usuario);
     return ResponseEntity.ok(postagens);
   }
