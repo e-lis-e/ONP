@@ -3,6 +3,7 @@ package br.com.politics.ONP.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import br.com.politics.ONP.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.politics.ONP.entities.Postagem;
-import br.com.politics.ONP.entities.Usuario;
 import br.com.politics.ONP.services.postagem.PostagemService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -49,7 +49,7 @@ public class PostagemController {
 
   @GetMapping("/usuario/{usuario_Id}")
   public ResponseEntity<List<Postagem>> findByUsuario(@PathVariable Long usuario_id) {
-    List<Postagem> postagens = postagemService.findByUsuario(usuario);
+    List<Postagem> postagens = postagemService.findByUsuario(usuario_id);
     return ResponseEntity.ok(postagens);
   }
 

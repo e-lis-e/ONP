@@ -25,8 +25,6 @@ public class Usuario {
     private String fotoDePerfil;
     @OneToMany(mappedBy = "usuario")
     private List<Comentario> comentarios;
-    //@OneToMany(mappedBy = "usuario")
-    //private List<Discussao> dicussaos;
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;
     @OneToMany(mappedBy = "usuario")

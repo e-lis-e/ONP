@@ -36,7 +36,6 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-    private String discussao; //TODO: relacionar à entidade
     private String conteudo;
     private String interacao; //TODO: relacionar à entidade
     @ManyToOne (cascade = CascadeType.ALL)
