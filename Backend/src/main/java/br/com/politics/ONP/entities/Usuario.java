@@ -29,6 +29,7 @@ public class Usuario {
     private PerfilEnum tipoUsuario;
     @OneToMany(mappedBy = "usuario")
     private List<Postagem> postagens;
-    private String interacoes; //TODO: Adicionar relação.
+    @OneToMany(mappedBy = "interacao_id")
+    private List<Interacao> interacoes;
 
 }
