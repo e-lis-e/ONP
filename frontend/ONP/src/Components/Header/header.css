@@ -1,0 +1,9 @@
+.header {
+    background-color:azure;
+    padding: 10px 20px;
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom: 1px solid #ddd;
+}
