@@ -1,4 +1,4 @@
-package br.com.politics.ONP.exceptions;
+package br.com.politics.ONP.exceptions.usuario;
 
 public class UsuarioNaoEncontradoException extends RuntimeException {
 
@@ -11,5 +11,8 @@ public class UsuarioNaoEncontradoException extends RuntimeException {
     }
     public UsuarioNaoEncontradoException(String message, Throwable cause) {
         super(message, cause);
+    }
+    public UsuarioNaoEncontradoException() {
+        super("ID inexistente");
     }
 }

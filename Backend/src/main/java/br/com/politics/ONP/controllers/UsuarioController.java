@@ -1,7 +1,7 @@
 package br.com.politics.ONP.controllers;
 
 import br.com.politics.ONP.entities.Usuario;
-import br.com.politics.ONP.exceptions.UsuarioExistenteException;
+import br.com.politics.ONP.exceptions.usuario.UsuarioExistenteException;
 import br.com.politics.ONP.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +18,8 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<Usuario> cadastraUsuario(@RequestBody Usuario usuario) {
-        try {
-            Usuario novoUsuario = usuarioService.cadastrarUsuario(usuario);
-            return ResponseEntity.status(201).body(novoUsuario);
-        } catch (UsuarioExistenteException e) {
-            System.out.println(e.getMessage());
-            return ResponseEntity.status(500).body(null);
-        }
+        Usuario novoUsuario = usuarioService.cadastrarUsuario(usuario);
+        return ResponseEntity.status(201).body(novoUsuario);
     }
 
     @GetMapping
@@ -33,5 +28,17 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarios);
     }
 
-    //Método de tratamento de erro =! de try and catch
+    @PutMapping("/update")
+    public ResponseEntity<Usuario> atualizarUsuario(@RequestBody Usuario usuario) {
+        Usuario usuarioExistente = usuarioService.atualizarUsuario(usuario);
+        return ResponseEntity.ok(usuarioExistente);
+    }
+
+    @DeleteMapping("/delete/{userId}")
+    public ResponseEntity<Void> removerUsuario(@PathVariable Long userId) {
+        usuarioService.removerUsuario(userId);
+        return ResponseEntity.noContent().build();
+    }
+    //buscarUsuarioPorEmail
+    //buscarUsuarioPorId
 }

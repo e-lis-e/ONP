@@ -1,8 +1,8 @@
 package br.com.politics.ONP.services.usuario;
 
 import br.com.politics.ONP.entities.Usuario;
-import br.com.politics.ONP.exceptions.UsuarioExistenteException;
-import br.com.politics.ONP.exceptions.UsuarioNaoEncontradoException;
+import br.com.politics.ONP.exceptions.usuario.UsuarioExistenteException;
+import br.com.politics.ONP.exceptions.usuario.UsuarioNaoEncontradoException;
 import br.com.politics.ONP.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,8 +42,9 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public void removerUsuario(Long id) {
-        Optional<Usuario> usuariobanco = usuarioRepository.findById(id);
-        usuarioRepository.delete(usuariobanco.get());
+        Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
+        usuarioExistente.ifPresent(usuario -> usuarioRepository.delete(usuario));
+        throw new UsuarioNaoEncontradoException();
     }
 
     @Override

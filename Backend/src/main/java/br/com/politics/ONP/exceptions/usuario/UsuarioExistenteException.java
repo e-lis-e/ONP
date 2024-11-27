@@ -1,4 +1,4 @@
-package br.com.politics.ONP.exceptions;
+package br.com.politics.ONP.exceptions.usuario;
 
 public class UsuarioExistenteException extends RuntimeException{
     public UsuarioExistenteException() {
