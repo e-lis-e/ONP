@@ -1,7 +1,8 @@
 package br.com.politics.ONP.services.usuario;
 
 import br.com.politics.ONP.entities.Usuario;
-import br.com.politics.ONP.exceptions.UsuarioExistenteException;
+import br.com.politics.ONP.exceptions.usuario.UsuarioExistenteException;
+import br.com.politics.ONP.exceptions.usuario.UsuarioNaoEncontradoException;
 import br.com.politics.ONP.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,8 +21,8 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Transactional
     public Usuario cadastrarUsuario(Usuario usuario) throws UsuarioExistenteException {
 
-        Optional<Usuario> usuariobanco = usuarioRepository.findByEmail(usuario.getEmail());
-        if (usuariobanco.isPresent()) {
+        Optional<Usuario> usuarioExistente = usuarioRepository.findByEmail(usuario.getEmail());
+        if (usuarioExistente.isPresent()) {
             throw new UsuarioExistenteException();
         }
 
@@ -29,14 +30,21 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public Usuario atualizarUsuario(Usuario usuario) {
-        return null;
+    public Usuario atualizarUsuario(Usuario usuario) throws UsuarioNaoEncontradoException {
+        Optional<Usuario> usuarioExistente = usuarioRepository.findByEmail(usuario.getEmail());
+        if (usuarioExistente.isPresent()) {
+            usuario.setId(usuarioExistente.get().getId());
+            return usuarioRepository.save(usuario);
+        }
+
+        throw new UsuarioNaoEncontradoException(usuarioExistente.get().getEmail());
     }
 
     @Override
     public void removerUsuario(Long id) {
-        Optional<Usuario> usuariobanco = usuarioRepository.findById(id);
-        usuarioRepository.delete(usuariobanco.get());
+        Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
+        usuarioExistente.ifPresent(usuario -> usuarioRepository.delete(usuario));
+        throw new UsuarioNaoEncontradoException();
     }
 
     @Override
@@ -54,8 +62,4 @@ public class UsuarioServiceImpl implements UsuarioService{
         return usuarioRepository.findById(id).get();
     }
 
-    @Override
-    public Usuario buscarUsuarioPorLoginESenha(String login, String senha) {
-        return null;
-    }
 }

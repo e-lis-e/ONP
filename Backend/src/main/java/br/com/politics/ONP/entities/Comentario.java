@@ -36,9 +36,9 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-    private String discussao; //TODO: relacionar à entidade
     private String conteudo;
-    private String interacao; //TODO: relacionar à entidade
+    @OneToMany(mappedBy = "interacao_id")
+    private List<Interacao> interacoes;
     @ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "comentario_pai_id")
     private Comentario comentarioPai;
@@ -46,7 +46,7 @@ public class Comentario {
     private List<Comentario> comentarioFilho;
     @Temporal(TemporalType.TIMESTAMP)
     private Date data;
-    //Adicionar característica de comentário verificado
+    private boolean comentarioVerificado = false;
 
 
     

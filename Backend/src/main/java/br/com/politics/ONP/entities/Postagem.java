@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(name = "postagens")
 
 public class Postagem {
     @Id
@@ -25,11 +25,11 @@ public class Postagem {
     private Usuario usuario;
     private String titulo;
     private String conteudo;
-    private String interacao; //TODO: relacionar à entidade
-    @OneToMany(mappedBy = "postagem")
+    @OneToMany(mappedBy = "interacao_id")
+    private List<Interacao> interacoes;
+    @OneToMany(mappedBy = "comentario_id")
     private List<Comentario> comentarios;
     private Date data;
-
-    //Adicionar tipo de postagem
+    private boolean postagemAdmin = false;
     
 }

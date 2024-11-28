@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.politics.ONP.entities.Postagem;
-import br.com.politics.ONP.entities.Usuario;
 import br.com.politics.ONP.repositories.PostagemRepository;
 
 @Service
@@ -27,8 +26,8 @@ public class PostagemService {
         return postagemRepository.findById(postagem_id);
     }
 
-    public List<Postagem> findByUsuario(Usuario usuario) {
-        return postagemRepository.findByUsuario(usuario);
+    public List<Postagem> findByUsuarioId(Long usuario_id) {
+        return postagemRepository.findByUsuarioId(usuario_id);
     }
 
 
