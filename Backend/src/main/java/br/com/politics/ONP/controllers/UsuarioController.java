@@ -39,6 +39,16 @@ public class UsuarioController {
         usuarioService.removerUsuario(userId);
         return ResponseEntity.noContent().build();
     }
-    //buscarUsuarioPorEmail
-    //buscarUsuarioPorId
+
+    @GetMapping("/{email}")
+    public ResponseEntity<Usuario> buscarUsuarioPorEmail(@PathVariable String email) {
+        Usuario usuario = usuarioService.buscarUsuarioPorEmail(email);
+        return ResponseEntity.ok(usuario);
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<Usuario> buscarUsuarioPorId(@PathVariable Long userId) {
+        Usuario usuario = usuarioService.buscarUsuarioPorId(userId);
+        return ResponseEntity.ok(usuario);
+    }
 }

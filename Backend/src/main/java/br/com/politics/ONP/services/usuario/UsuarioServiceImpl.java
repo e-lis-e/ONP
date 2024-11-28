@@ -41,7 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public void removerUsuario(Long id) {
+    public void removerUsuario(Long id) throws UsuarioNaoEncontradoException {
         Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
         usuarioExistente.ifPresent(usuario -> usuarioRepository.delete(usuario));
         throw new UsuarioNaoEncontradoException();
@@ -53,13 +53,15 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public Usuario buscarUsuarioPorEmail(String email) {
-        return usuarioRepository.findByEmail(email).get();
+    public Usuario buscarUsuarioPorEmail(String email) throws UsuarioNaoEncontradoException {
+        Optional<Usuario> usuarioExistente = usuarioRepository.findByEmail(email);
+        return usuarioExistente.orElseThrow(() -> new UsuarioNaoEncontradoException(email));
     }
 
     @Override
-    public Usuario buscarUsuarioPorId(Long id) {
-        return usuarioRepository.findById(id).get();
+    public Usuario buscarUsuarioPorId(Long id) throws UsuarioNaoEncontradoException {
+        Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
+        return usuarioExistente.orElseThrow(UsuarioNaoEncontradoException::new);
     }
 
 }

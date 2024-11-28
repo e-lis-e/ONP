@@ -10,8 +10,8 @@ public interface UsuarioService {
 
     public Usuario cadastrarUsuario(Usuario usuario) throws UsuarioExistenteException;
     public Usuario atualizarUsuario(Usuario usuario) throws UsuarioNaoEncontradoException;
-    public void removerUsuario(Long id) throws UsuarioNaoEncontradoException;;
+    public void removerUsuario(Long id) throws UsuarioNaoEncontradoException;
     public List<Usuario> listarUsuarios();
-    public Usuario buscarUsuarioPorEmail(String email);
-    public Usuario buscarUsuarioPorId(Long id);
+    public Usuario buscarUsuarioPorEmail(String email) throws UsuarioNaoEncontradoException;
+    public Usuario buscarUsuarioPorId(Long id) throws UsuarioNaoEncontradoException;
 }
