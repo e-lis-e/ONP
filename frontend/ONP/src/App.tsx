@@ -5,16 +5,17 @@ import LoginScreen from './Pages/Login/LoginScreen';
 import './App.css'
 import RegisterScreen from './Pages/Register/RegisterScreen';
 import Perfil from './Pages/Perfil/Perfil';
+import SearchPage from './Pages/Search/SearchPage';
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/Dashboard" element={<Dashboard/>} />
+                <Route path="/" element={<Dashboard/>} />
                 <Route path='/Login' element={<LoginScreen/>}/>
                 <Route path='/Register' element={<RegisterScreen/>}/>
-                <Route path='/Profile' element={<Perfil
-                />}/>
+                <Route path='/Profile' element={<Perfil/>}/>
+                <Route path='/Search' element={<SearchPage/>}/>
             </Routes>
         </Router>
 
