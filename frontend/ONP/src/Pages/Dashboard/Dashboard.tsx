@@ -3,15 +3,25 @@ import './Dashboard.css';
 import Header from '../../Components/Header/Header';
 import { useEffect, useState } from 'react';
 
-const Dashboard = () => {
-    // const [discussoes, setDiscussoes] = useState([]);
-    const [postagens, setPostagens] = useState([]);
+interface Postagem {
+    postagem_id: number;
+    titulo: string;
+    usuario?: {
+        nome: string;
+    };
+}
+const Dashboard: React.FC  = () => {
+    const [postagens, setPostagens] = useState<Postagem[]>([]);
 
     useEffect(() => {
-        
-        fetch('/api/postagens')
-        .then((res) => res.json())
-        .then((data: InstanceType<typeof postagens>[]) => setPostagens(data))
+        fetch('/api/postagem')
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error("Erro ao buscar postagens");
+            }
+            return res.json();
+        })
+        .then((data: Postagem[]) => setPostagens(data))
         .catch((error) => console.error('Erro ao buscar postagens:', error));
     }, []);
 
@@ -24,8 +34,8 @@ const Dashboard = () => {
                         <h2>Discussões</h2>
                          {postagens.length > 0 ? (
                             <ul>
-                                {postagens.map((discussao) => (
-                                    <li key={post.postagem_id}>{post.titulo}</li>
+                                {postagens.map((postagem) => (
+                                    <li key={postagem.postagem_id}>{postagem.titulo}</li>
                                 ))}
                             </ul>
                         ) : (
@@ -36,8 +46,8 @@ const Dashboard = () => {
                         <h2>Postagens</h2>
                         {postagens.length > 0 ? (
                             <ul>
-                                {postagens.map((post) => (
-                                    <li key={post.postagem_id}>{post.titulo} - <span>{post.usuario?.nome}</span></li>
+                                {postagens.map((postagem) => (
+                                    <li key={postagem.postagem_id}>{postagem.titulo} - <span>{postagem.usuario?.nome}</span></li>
                                 ))}
                             </ul>
                         ) : (
