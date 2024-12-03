@@ -6,4 +6,27 @@
     justify-content: space-between;
     align-items: center; 
     border-bottom: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+.searchbar {
+    border-color: #ddd;
+    border-radius: 25px;
+    color: #ddd;
+    width: 400px;
+    height: 30px;
+}
+
+.profileDiv {
+    position: relative;
+    display: inline-block;
+}
+
+.profilePic {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profilePic:hover {
+    transform: scale(1.1);
 }
