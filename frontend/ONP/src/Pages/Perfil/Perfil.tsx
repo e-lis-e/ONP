@@ -1,10 +1,10 @@
-//import React from 'react';
+import "./Perfil.css";
 
 import Header from "../../Components/Header/Header";
 
 const Perfil = () => {
     return (
-        <div>
+        <div className="perfil">
             <Header/>
             <div className="container">
                 <h2>Editar Perfil</h2>
