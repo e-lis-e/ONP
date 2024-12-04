@@ -1,12 +1,12 @@
 //import React from "react";
-import './Dashboard.css';
+import './SearchPage.css';
 import Header from '../../Components/Header/Header';
 
 const SearchPage = () => {
     return (
-        <div>
-            <Header />
+        <div className='base'>
             <div className="container">
+            <Header />
                 <div className="searchContent">
     
                 </div>
