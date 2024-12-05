@@ -1,7 +1,6 @@
 package br.com.politics.ONP.controllers;
 
 import br.com.politics.ONP.entities.Usuario;
-import br.com.politics.ONP.exceptions.usuario.UsuarioExistenteException;
 import br.com.politics.ONP.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
