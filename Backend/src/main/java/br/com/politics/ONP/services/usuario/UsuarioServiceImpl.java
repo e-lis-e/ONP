@@ -41,6 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
+    @Transactional
     public void removerUsuario(Long id) throws UsuarioNaoEncontradoException {
         Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
         usuarioExistente.ifPresent(usuario -> usuarioRepository.delete(usuario));
