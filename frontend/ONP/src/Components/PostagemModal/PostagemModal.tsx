@@ -13,6 +13,7 @@ const PostagemModal: React.FC<PostagemModalProps> = ({ isOpen, onClose }) => {
     return (
         <div className="postagemModal" onClick={onClose}>
             <div className="postagemModalContent" onClick={(e) => e.stopPropagation()}>
+                <input type="text" className="postTitle" placeholder="Título"/>
                <input type="text" className="postBox" placeholder="Poste suas dúvidas e discussões" color="333"/>
                <button className="postagemButton"> Enviar </button>
             </div>
