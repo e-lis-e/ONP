@@ -21,6 +21,10 @@
     position: relative; 
 }
 
+.title {
+    
+}
+
 .postBox {
     display: flex;
     width: 95%; 
