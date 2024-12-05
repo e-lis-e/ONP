@@ -8,7 +8,8 @@ const RegisterScreen = () => {
     const [formData, setFormData] = useState({
         nomeDeUsuario: '',
         email: '',
-        senha: ''
+        senha: '',
+        fotoDePerfil: null
     });
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const RegisterScreen = () => {
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await api.post('/usuarios', formData);
+            await api.post('api/auth/register', formData);
             navigate('/login');
         } catch (err: unknown) {
             if (err instanceof AxiosError) {
