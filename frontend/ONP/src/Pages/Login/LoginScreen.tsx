@@ -21,7 +21,7 @@ const LoginScreen = () => {
         try {
             const response = await api.post('/auth/login', formData);
             localStorage.setItem('token', response.data.token); 
-            navigate('/dashboard');
+            navigate('/');
         } catch (err: unknown) {
             if (err instanceof AxiosError) {
                 setError(err.response?.data?.message || 'Erro ao fazer login.');
