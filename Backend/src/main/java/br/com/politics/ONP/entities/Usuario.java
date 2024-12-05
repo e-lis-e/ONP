@@ -1,6 +1,7 @@
 package br.com.politics.ONP.entities;
 
 import br.com.politics.ONP.entities.enums.PerfilEnum;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +29,7 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private PerfilEnum tipoUsuario;
     @OneToMany(mappedBy = "usuario")
+    @JsonManagedReference
     private List<Postagem> postagens;
     @OneToMany(mappedBy = "usuario")
     private List<Interacao> interacoes;
