@@ -3,7 +3,6 @@ package br.com.politics.ONP.controllers;
 import java.util.List;
 import java.util.Optional;
 
-import br.com.politics.ONP.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
