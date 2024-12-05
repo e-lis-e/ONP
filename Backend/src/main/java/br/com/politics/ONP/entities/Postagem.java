@@ -19,15 +19,15 @@ import lombok.Setter;
 public class Postagem {
     @Id
     @GeneratedValue
-    private Long postagem_id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     private String titulo;
     private String conteudo;
-    @OneToMany(mappedBy = "interacao_id")
+    @OneToMany(mappedBy = "postagem")
     private List<Interacao> interacoes;
-    @OneToMany(mappedBy = "comentario_id")
+    @OneToMany(mappedBy = "postagem")
     private List<Comentario> comentarios;
     private Date data;
     private boolean postagemAdmin = false;
