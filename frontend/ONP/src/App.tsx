@@ -6,6 +6,7 @@ import './App.css'
 import RegisterScreen from './Pages/Register/RegisterScreen';
 import Perfil from './Pages/Perfil/Perfil';
 import SearchPage from './Pages/Search/SearchPage';
+import PostagemScreen from './Pages/Postagem/PostagemScreen';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path='/Register' element={<RegisterScreen/>}/>
                 <Route path='/Profile' element={<Perfil/>}/>
                 <Route path='/Search' element={<SearchPage/>}/>
+                <Route path="/postagem/:postagem_id" element={<PostagemScreen/>} />
             </Routes>
         </Router>
 
