@@ -73,3 +73,8 @@ link {
 link:hover {
     color:darkred;
 }
+
+.error {
+    color: red;
+
+}
