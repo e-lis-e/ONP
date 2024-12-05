@@ -16,7 +16,7 @@ const PostagemScreen: React.FC = () => {
     const [postagem, setPostagem] = useState<Postagem | null>(null);
 
     useEffect(() => {
-        fetch(`/api/postagem/${postagem_id}`)
+        fetch(`http://localhost:8080/api/postagem/${postagem_id}`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Erro ao buscar a postagem");

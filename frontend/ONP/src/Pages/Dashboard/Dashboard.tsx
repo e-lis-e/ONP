@@ -4,27 +4,44 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface Postagem {
-    postagem_id: number;
+    id: number;
     titulo: string;
-    usuario?: {
-        nome: string;
-    };
+    conteudo: string;
+    data: string;
+    postagemAdmin: boolean;
+    interacoes: unknown[];
+    comentarios: unknown[];
 }
 
 const Dashboard: React.FC = () => {
     const [postagens, setPostagens] = useState<Postagem[]>([]);
     const navigate = useNavigate();
 
+    const formatDate = (data: string): string => {
+        return new Date(data).toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+        });
+    };
+
     useEffect(() => {
-        fetch('/api/postagem')
+        fetch('http://localhost:8080/api/postagem')
             .then((res) => {
                 if (!res.ok) {
-                    throw new Error("Erro ao buscar postagens");
+                    throw new Error(`Erro ${res.status}: ${res.statusText}`);
+                }
+                const contentType = res.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    console.log(res)
+                    throw new Error('Resposta não é JSON');
                 }
                 return res.json();
             })
             .then((data: Postagem[]) => setPostagens(data))
-            .catch((error) => console.error('Erro ao buscar postagens:', error));
+            .catch((error) => {
+                console.error('Erro ao buscar postagens:', error);
+            });
     }, []);
 
     const handlePostagemClick = (postagemId: number) => {
@@ -42,8 +59,8 @@ const Dashboard: React.FC = () => {
                             <ul>
                                 {postagens.map((postagem) => (
                                     <li
-                                        key={postagem.postagem_id}
-                                        onClick={() => handlePostagemClick(postagem.postagem_id)}
+                                        key={postagem.id}
+                                        onClick={() => handlePostagemClick(postagem.id)}
                                         style={{ cursor: 'pointer', color: 'blue' }}
                                     >
                                         {postagem.titulo}
@@ -60,11 +77,15 @@ const Dashboard: React.FC = () => {
                             <ul>
                                 {postagens.map((postagem) => (
                                     <li
-                                        key={postagem.postagem_id}
-                                        onClick={() => handlePostagemClick(postagem.postagem_id)}
+                                        key={postagem.id}
+                                        onClick={() => handlePostagemClick(postagem.id)}
                                         style={{ cursor: 'pointer', color: 'blue' }}
                                     >
-                                        {postagem.titulo} - <span>{postagem.usuario?.nome}</span>
+                                        {postagem.titulo} -{' '}
+                                        <span>
+                                            {postagem.postagemAdmin ? 'Admin' : 'Usuário'} |{' '}
+                                            {formatDate(postagem.data)}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>
