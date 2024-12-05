@@ -37,7 +37,7 @@ public class PostagemController {
         .orElseGet(() -> ResponseEntity.notFound().build());
   }
 
-  @GetMapping("/usuario/{usuario_Id}")
+  @GetMapping("/usuario/{usuario_id}")
   public ResponseEntity<List<Postagem>> findByUsuarioId(@PathVariable Long usuario_id) {
     List<Postagem> postagens = postagemService.findByUsuarioId(usuario_id);
     return ResponseEntity.ok(postagens);

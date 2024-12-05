@@ -3,6 +3,9 @@ package br.com.politics.ONP.entities;
 import java.util.Date;
 import java.util.List;
 
+import br.com.politics.ONP.entities.deserializer.UsuarioDeserializer;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,9 +23,13 @@ public class Postagem {
     @Id
     @GeneratedValue
     private Long id;
+
     @ManyToOne
     @JoinColumn(name = "usuario_id")
+    @JsonDeserialize(using = UsuarioDeserializer.class)
+    @JsonBackReference
     private Usuario usuario;
+
     private String titulo;
     private String conteudo;
     @OneToMany(mappedBy = "postagem")
