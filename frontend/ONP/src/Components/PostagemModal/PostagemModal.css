@@ -21,8 +21,20 @@
     position: relative; 
 }
 
-.title {
-    
+.postTitle {
+    display:flex;
+    width: 95%;
+    height: 20%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none; 
+    outline: none;
+    background-color: #fafafa;
+    color: #333; 
+    margin-bottom: 20px;
+
 }
 
 .postBox {
