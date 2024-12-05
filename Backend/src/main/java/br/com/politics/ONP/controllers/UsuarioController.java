@@ -40,13 +40,13 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("/email/{email}")
     public ResponseEntity<Usuario> buscarUsuarioPorEmail(@PathVariable String email) {
         Usuario usuario = usuarioService.buscarUsuarioPorEmail(email);
         return ResponseEntity.ok(usuario);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/id/{userId}")
     public ResponseEntity<Usuario> buscarUsuarioPorId(@PathVariable Long userId) {
         Usuario usuario = usuarioService.buscarUsuarioPorId(userId);
         return ResponseEntity.ok(usuario);

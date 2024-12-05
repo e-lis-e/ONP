@@ -7,6 +7,7 @@ import br.com.politics.ONP.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.lang.reflect.Field;
 
 import java.util.List;
 import java.util.Optional;
@@ -32,20 +33,40 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public Usuario atualizarUsuario(Usuario usuario) throws UsuarioNaoEncontradoException {
         Optional<Usuario> usuarioExistente = usuarioRepository.findByEmail(usuario.getEmail());
-        if (usuarioExistente.isPresent()) {
-            usuario.setId(usuarioExistente.get().getId());
-            return usuarioRepository.save(usuario);
-        }
 
-        throw new UsuarioNaoEncontradoException(usuarioExistente.get().getEmail());
+        if (usuarioExistente.isPresent()) {
+            Usuario usuarioAtual = usuarioExistente.get();
+
+            for (Field field : Usuario.class.getDeclaredFields()) {
+                field.setAccessible(true);
+
+                if (!field.getName().equals("id")) {
+                    try {
+                        Object novoValor = field.get(usuario);
+                        if (novoValor != null) {
+                            field.set(usuarioAtual, novoValor);
+                        }
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return usuarioRepository.save(usuarioAtual);
+        }
+        throw new UsuarioNaoEncontradoException(usuario.getEmail());
     }
+
 
     @Override
     @Transactional
     public void removerUsuario(Long id) throws UsuarioNaoEncontradoException {
         Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
-        usuarioExistente.ifPresent(usuario -> usuarioRepository.delete(usuario));
-        throw new UsuarioNaoEncontradoException();
+
+        if (usuarioExistente.isPresent()) {
+            usuarioRepository.delete(usuarioExistente.get());
+        } else {
+            throw new UsuarioNaoEncontradoException("ID inexistente");
+        }
     }
 
     @Override
