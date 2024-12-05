@@ -16,7 +16,7 @@ public class Interacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private boolean like;
+    private boolean liked;
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
