@@ -29,7 +29,7 @@ public class Usuario {
     private PerfilEnum tipoUsuario;
     @OneToMany(mappedBy = "usuario")
     private List<Postagem> postagens;
-    @OneToMany(mappedBy = "interacao_id")
+    @OneToMany(mappedBy = "usuario")
     private List<Interacao> interacoes;
 
 }

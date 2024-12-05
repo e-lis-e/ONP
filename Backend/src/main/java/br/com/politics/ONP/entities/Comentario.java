@@ -29,7 +29,7 @@ import lombok.Setter;
 public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long comentario_id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "postagem_id")
     private Postagem postagem;
@@ -37,7 +37,7 @@ public class Comentario {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     private String conteudo;
-    @OneToMany(mappedBy = "interacao_id")
+    @OneToMany(mappedBy = "comentario")
     private List<Interacao> interacoes;
     @ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "comentario_pai_id")
