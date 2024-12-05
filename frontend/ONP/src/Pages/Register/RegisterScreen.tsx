@@ -21,7 +21,7 @@ const RegisterScreen = () => {
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await api.post('api/auth/register', formData);
+            await api.post('auth/register', formData);
             navigate('/login');
         } catch (err: unknown) {
             if (err instanceof AxiosError) {
