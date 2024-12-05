@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
                                     <li
                                         key={postagem.postagem_id}
                                         onClick={() => handlePostagemClick(postagem.postagem_id)}
-                                        style={{ cursor: 'pointer', color: 'blue' }}
+                                        style={{ cursor: 'pointer', color: 'white' }}
                                     >
                                         {postagem.titulo}
                                     </li>
@@ -62,7 +62,7 @@ const Dashboard: React.FC = () => {
                                     <li
                                         key={postagem.postagem_id}
                                         onClick={() => handlePostagemClick(postagem.postagem_id)}
-                                        style={{ cursor: 'pointer', color: 'blue' }}
+                                        style={{ cursor: 'pointer', color: 'white' }}
                                     >
                                         {postagem.titulo} - <span>{postagem.usuario?.nome}</span>
                                     </li>
