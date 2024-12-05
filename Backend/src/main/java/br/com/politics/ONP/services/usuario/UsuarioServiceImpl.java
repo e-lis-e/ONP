@@ -5,6 +5,7 @@ import br.com.politics.ONP.exceptions.usuario.UsuarioExistenteException;
 import br.com.politics.ONP.exceptions.usuario.UsuarioNaoEncontradoException;
 import br.com.politics.ONP.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.lang.reflect.Field;
@@ -18,6 +19,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     @Override
     @Transactional
     public Usuario cadastrarUsuario(Usuario usuario) throws UsuarioExistenteException {
@@ -27,6 +31,8 @@ public class UsuarioServiceImpl implements UsuarioService{
             throw new UsuarioExistenteException();
         }
 
+        String senha_cripto = this.passwordEncoder.encode(usuario.getPassword());
+        usuario.setSenha(senha_cripto);
         return usuarioRepository.save(usuario);
     }
 
