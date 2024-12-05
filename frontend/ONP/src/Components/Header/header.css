@@ -7,6 +7,7 @@
     align-items: center; 
     border-bottom: 1px solid #ddd;
     border-radius: 25px;
+    width: 95%;
 }
 
 .searchbar {
